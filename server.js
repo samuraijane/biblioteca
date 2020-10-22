@@ -1,9 +1,6 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
-
-app.use(bodyParser.json());
 
 app.use('/css', express.static(__dirname + "/css"));
 app.use('/js', express.static(__dirname + "/js"));
