@@ -7,11 +7,10 @@ The application allows a user to build his or her own personal library collectio
 ### Tech Stack
 * CSS
 * HTML
-* JavaScript (vanilla)
+* JavaScript
 * Node
 * PosgreSQL
 * Sequelize
-* Vanilla
 
 ### Prerequisites
 * You should at least have had an introduction to each of the technologies listed above.
@@ -19,4 +18,7 @@ The application allows a user to build his or her own personal library collectio
 * Familiarity with the command line, we use it a lot here.
 
 ### Workflow
-We have grouped the overarching steps into a series of folders which are essentially mini-lessons that build the application. The README files provide instructions and hints that you can use as a starting point to complete each lesson. We encourage you to follow them as you work and then compare your solution to the one provided. If you're in a hurry and want to jump ahead to the solution, the README file can help you deconstruct our approach and allow you to more clearly understand what's going on.
+Each filename in the **steps/** directory corresponds to a branch in this repo which shows the completed solution. Please note that the instructions contained within the step files (e.g. **s_01-01.md**) are not written in a strictly linear fashion. The idea here is to give the student enough information to build the application while also providing opportunities for problem solving (which is where the real learning happens). The student will benefit most by building each step first, as per the step file, and then comparing his or her solution to the one provided.
+
+### Should I clone this repo?
+Unless you want to have copy of it for reference on your own computer, there is no need to clone this repo. As you are building everything from scratch, the primary purpose of it is to provide a step-by-step overview of how to build a full-stack application which, after completing, you can compare to your own code.
