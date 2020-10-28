@@ -17,6 +17,6 @@ app.use('/', express.static(__dirname + "/public"));
 apiBooks(app, fetch);
 apiHeartbeat(app);
 
-app.listen(3001, () => {
-  console.log('The server is running at port 3001');
+app.listen(process.env.PORT, () => {
+  console.log(`The server is running at port ${process.env.PORT}`);
 });
