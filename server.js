@@ -14,15 +14,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(session({
-  secret: 'super secret',
-  cookie: {
-    maxAge: 60000,
-    sameSite: "none",
-    secure: true
-  },
-  resave: true,
-  saveUninitialized: true
-}));
+  secret: "super secret",
+  cookie: {maxAge: 60000}
+}))
 app.use(passport.initialize());
 app.use(passport.session());
 
