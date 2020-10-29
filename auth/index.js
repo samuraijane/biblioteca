@@ -1,12 +1,17 @@
-module.exports = (app) => {
+module.exports = (app, passport) => {
 
   // -----------------------------------------------------------------------------
-  //                                     GET
+  //                                LOGIN
   // -----------------------------------------------------------------------------
-  app.get('/auth/github', (req, res) => {
-    console.log('also trying to login');
-    res.json({
-      data: "trying to login"
-    })
-  });
+  app.get('/auth/github', passport.authenticate('github'));
+
+  // -----------------------------------------------------------------------------
+  //                                CALLBACK
+  // -----------------------------------------------------------------------------
+  app.get(
+    '/auth/github/callback',
+    passport.authenticate('github', {failureRedirect: '/login'}),
+    (req, res) => res.redirect('/')
+  );
+
 };
