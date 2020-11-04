@@ -28,3 +28,8 @@ Create secret keys at GitHub and add their values to **.env**
 ## Step 09-01
 Add authentication to the app
 
+## Step 10-01
+Add a _/dashboard_ endpoint that is protected
+
+## Step 11-01
+Add EJS templating with partials for `<header>`, `<main>`, and `<footer>`
