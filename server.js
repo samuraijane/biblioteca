@@ -7,7 +7,6 @@ const session = require('express-session')
 
 const apiBooks = require('./api/apiBooks');
 const apiHeartbeat = require('./api/apiHeartbeat');
-const pages = require('./pages');
 const auth = require('./auth');
 const gitHubStrategy = require('./auth/strategy/github');
 
@@ -30,7 +29,6 @@ app.use('/', express.static(__dirname + "/public"));
 
 apiBooks(app, fetch);
 apiHeartbeat(app);
-pages(app)
 auth(app, passport);
 
 app.listen(process.env.PORT, () => {

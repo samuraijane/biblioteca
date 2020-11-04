@@ -10,8 +10,8 @@ module.exports = (app, passport) => {
   // -----------------------------------------------------------------------------
   app.get(
     '/auth/github/callback',
-    passport.authenticate('github', {failureRedirect: '/'}),
-    (req, res) => res.redirect('/dashboard')
+    passport.authenticate('github', {failureRedirect: '/login'}),
+    (req, res) => res.redirect('/')
   );
 
 };
