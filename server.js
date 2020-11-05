@@ -9,6 +9,7 @@ const apiBooks = require('./api/apiBooks');
 const apiHeartbeat = require('./api/apiHeartbeat');
 const auth = require('./auth');
 const dashboard = require('./routes/dashboard');
+const search = require('./routes/search');
 const ensureAuthenticated = require('./middleware/ensureAuthenticated');
 const gitHubStrategy = require('./auth/strategy/github');
 
@@ -38,6 +39,7 @@ apiBooks(app, fetch);
 apiHeartbeat(app);
 auth(app, passport);
 dashboard(app, ensureAuthenticated);
+search(app, ensureAuthenticated);
 
 app.listen(process.env.PORT, () => {
   console.log(`The server is running at port ${process.env.PORT}`);
