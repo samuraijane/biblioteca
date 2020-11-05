@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.y-outer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.padding2 {
+  padding: 2rem;
+}
+
+header {
+  background-color: aliceblue;
+  border-bottom: 3px solid #888;;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #4287f5;
+  border-top: 3px solid #3873d1;
+  height: 140px;
+}
