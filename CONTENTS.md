@@ -38,4 +38,10 @@ Connect CSS and JS to **index.ejs** and replace the contents of `<header>` and `
 Create a protected endpoint for **/dashboard** that renders and EJS page specfic to dashboard
 
 ## Step 12-01
-Save user ID to sessions so we can retrieve it later
+Render a simple page when the URL is at /search
+
+## Step 13-01
+Create a logout button and move all nav items, which render based on whether on whether a user is authenticated, to <header>
+
+## Step 14-01
+Add search capability at /search which prints the results to the console
