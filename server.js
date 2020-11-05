@@ -31,7 +31,7 @@ app.use('/css', express.static(__dirname + "/css"));
 app.use('/js', express.static(__dirname + "/js"));
 
 app.get('/', (req, res) => {
-  res.render('pages/index')
+  res.render('pages', {template: 'landing'});
 });
 
 apiBooks(app, fetch);
