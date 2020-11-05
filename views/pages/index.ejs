@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="y-outer">
-      <%- include('../partials/header') %>
+      <%- include('../partials/header', isAuthenticated) %>
       <%- include(`../partials/main/${template}`); %>
       <%- include('../partials/footer'); %>
     </div>

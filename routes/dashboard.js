@@ -4,6 +4,6 @@ module.exports = (app, ensureAuthenticated) => {
   //                                     GET
   // -----------------------------------------------------------------------------
   app.get("/dashboard", ensureAuthenticated, async (req, res) => {
-    res.render('pages', {template: 'dashboard'});
+    res.render('pages', {template: 'dashboard', isAuthenticated: req.isAuthenticated()});
   });
 };

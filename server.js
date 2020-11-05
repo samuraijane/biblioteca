@@ -32,7 +32,7 @@ app.use('/css', express.static(__dirname + "/css"));
 app.use('/js', express.static(__dirname + "/js"));
 
 app.get('/', (req, res) => {
-  res.render('pages', {template: 'landing'});
+  res.render('pages', {template: 'landing', isAuthenticated: req.isAuthenticated()});
 });
 
 apiBooks(app, fetch);

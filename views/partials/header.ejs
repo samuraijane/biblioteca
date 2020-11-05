@@ -1,3 +1,12 @@
 <header class="padding2">
   <h1>Biblioteca</h1>
+  <ul>
+    <% if(isAuthenticated) { %>
+      <li><a href="../dashboard">Dashboard</a></li>
+      <li><a href="../search">Search</a></li>
+      <li><a href="../auth/logout">Logout</a></li>
+    <% } else { %>
+      <li><a href="../auth/github">Login</a></li>
+    <% } %>
+  </ul>
 </header>
