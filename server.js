@@ -8,6 +8,8 @@ const session = require('express-session')
 const apiBooks = require('./api/apiBooks');
 const apiHeartbeat = require('./api/apiHeartbeat');
 const auth = require('./auth');
+const dashboard = require('./routes/dashboard');
+const ensureAuthenticated = require('./middleware/ensureAuthenticated');
 const gitHubStrategy = require('./auth/strategy/github');
 
 const app = express();
@@ -35,6 +37,7 @@ app.get('/', (req, res) => {
 apiBooks(app, fetch);
 apiHeartbeat(app);
 auth(app, passport);
+dashboard(app, ensureAuthenticated);
 
 app.listen(process.env.PORT, () => {
   console.log(`The server is running at port ${process.env.PORT}`);
