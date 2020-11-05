@@ -29,7 +29,11 @@ Create secret keys at GitHub and add their values to **.env**
 Add authentication to the app
 
 ## Step 10-01
-Add a _/dashboard_ endpoint that is protected
+Replace **public/index.html** with EJS templating and partials for `<footer>`, `<header>`, and `<main>`
+
+## Step 10-02
+Connect CSS and JS to **index.ejs** and replace the contents of `<header>` and `<main>` with what we had previously in **public/index.html**
 
 ## Step 11-01
-Add EJS templating with partials for `<header>`, `<main>`, and `<footer>`
+Create a protected endpoint for **/dashboard** that renders and EJS page specfic to dashboard
+
