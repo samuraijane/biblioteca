@@ -37,3 +37,5 @@ Connect CSS and JS to **index.ejs** and replace the contents of `<header>` and `
 ## Step 11-01
 Create a protected endpoint for **/dashboard** that renders and EJS page specfic to dashboard
 
+## Step 12-01
+Save user ID to sessions so we can retrieve it later
