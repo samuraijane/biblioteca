@@ -12,6 +12,8 @@ const gitHubStrategy = require('./auth/strategy/github');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.json());
 app.use(session({
   secret: "super secret",
@@ -25,7 +27,10 @@ passport.use(gitHubStrategy);
 
 app.use('/css', express.static(__dirname + "/css"));
 app.use('/js', express.static(__dirname + "/js"));
-app.use('/', express.static(__dirname + "/public"));
+
+app.get('/', (req, res) => {
+  res.render('pages/index')
+});
 
 apiBooks(app, fetch);
 apiHeartbeat(app);
