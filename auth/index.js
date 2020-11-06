@@ -20,6 +20,6 @@ module.exports = (app, passport) => {
   app.get('/auth/logout', (req, res) => {
     req.logout()
     res.redirect("/")
-})
+  });
 
 };
