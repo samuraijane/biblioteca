@@ -14,4 +14,19 @@ module.exports = (app, fetch) => {
       .then(data => res.json(data));
     }
   });
+
+  // -----------------------------------------------------------------------------
+  //                                     POST
+  // -----------------------------------------------------------------------------
+  app.post("/api/books/:id", async (req, res) => {
+    const { bookID } = req.body;
+    if (!bookID) {
+      res.json({error: "A value for 'bookID' must be present but it is missing."})
+    } else {
+      fetch(`http://openlibrary.org/works/${bookID}.json`)
+      .then(res.json({message: `The book with ID ${bookID} has been found at the Open Library API.`}))
+      .catch(err => res.json({ERROR: `The following error has occurred: ${err}`}));
+    }
+  });
+
 };
