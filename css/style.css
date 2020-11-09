@@ -29,3 +29,7 @@ footer {
   border-top: 3px solid #3873d1;
   height: 140px;
 }
+
+.books li {
+  margin: 20px 0;
+}

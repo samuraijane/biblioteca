@@ -18,12 +18,12 @@ if (endpoint === "search") {
     const formData = new FormData(e.target);
     const body = stringifyFormData(formData);
     doPost('http://localhost:3001/api/books', body)
-    .then(res => console.log('Successful response:', res))
+    .then(res => addElementsToDom('books', res, 'searchPage', 'li'))
     .catch(err => console.log('We have an error:', err));
   }
 
   function stringifyFormData(fd) {
-    const data = {}
+    const data = {};
 
     for (let field of fd.keys()) {
       const value = fd.get(field);
@@ -47,4 +47,19 @@ async function doPost (url = '', body = {}) {
     body: JSON.stringify(body)
   });
   return response.json();
+}
+
+
+function addElementsToDom(className, data, elID, type) {
+  if(type === 'li') {
+    const elUL = document.createElement('ul');
+    elUL.className = className;
+    data.docs.forEach(item => {
+      const elLI = document.createElement('li');
+      elLI.innerHTML = `<p>${item.title}</p><p>by ${item.author_name[0]}</p>`;
+      elUL.appendChild(elLI);
+    });
+    const searchPage = document.getElementById(elID);
+    searchPage.appendChild(elUL);
+  }
 }
