@@ -1,47 +1,127 @@
-## Step 01-01
-Create the initial file tree for the app
+## 01-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | create the initial file structure upon which we can build the application |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 01-02 (Optional)
-Add the code from the previous step to your own GH repository
+## 01-02
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | connect the application from the previous step to a new git repository    |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 02-01
-Add server-related dependencies and build a simple server with one endpoint
+## 02-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | add server-related dependencies                                           |
+| **database** | n/a                                                                       |
+| **server**   | build a simple server with one endpoint that sends a response             |
 
-## Step 03-01
-Build a very simple UI that is connected to both CSS and JavaScript
+## 03-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | build a very simple UI that is connected to both CSS and JavaScript       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 04-01
-Create an endpoint to GET books from the Open Library API and separate routes into a dedicated directory
+## 04-01
+|              |                                                                                 |
+|:------------ | :-------------------------------------------------------------------------------|
+| **client**   | n/a                                                                             |
+| **config**   | n/a                                                                             |
+| **database** | n/a                                                                             |
+| **server**   | create an endpoint that responds to a POST request by fetching data from an API |
 
-## Step 05-01
-Use the `dotenv` package and a **.env** file to hide the `PORT` that the server is running on
+## 05-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | use a `.env` file to hide the port that the server uses                   |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 06-01
-Use `sequelize-cli` to automate the creation of the database and the `User` model
+## 06-01
+|              |                                                                                   |
+|:------------ | :-------------------------------------------------------------------------------- |
+| **client**   | n/a                                                                               |
+| **config**   | n/a                                                                               |
+| **database** | use `sequelize-cli` to automate the creation of the database and the `User` model |
+| **server**   | n/a                                                                               |
 
-## Step 07-01
-Add a login button to the UI that fires a function at an auth endpoint
+## 07-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | add a login button to the UI that makes a GET request at an auth endpoint |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 08-01
-Create secret keys at GitHub and add their values to **.env**
+## 08-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | create secret keys at GitHub and add their values to `.env`               |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 09-01
-Add authentication to the app
+## 09-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | add a GitHub authentication strategy to the application                   |
 
-## Step 10-01
-Replace **public/index.html** with EJS templating and partials for `<footer>`, `<header>`, and `<main>`
+## 10-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | replace `public/index.html` with EJS templating                           |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 10-02
-Connect CSS and JS to **index.ejs** and replace the contents of `<header>` and `<main>` with what we had previously in **public/index.html**
+## 10-02
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | connect CSS and JS to `pages/index.ejs` and update its HTML content       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
 
-## Step 11-01
-Create a protected endpoint for **/dashboard** that renders and EJS page specfic to dashboard
+## 11-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | create a protected endpoint for `/dashboard` that renders an EJS template |
 
-## Step 12-01
-Render a simple page when the URL is at /search
+## 12-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | n/a                                                                       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | render a simple page when the URL is at `/search`                         |
 
-## Step 13-01
-Create a logout button and move all nav items, which render based on whether on whether a user is authenticated, to <header>
+## 13-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | create a logout button                                                    |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | add dynamic nav items, based on login status, to `<header>`               |
 
-## Step 14-01
-Add search capability at /search which prints the results to the console
+## 14-01
+|              |                                                                           |
+|:------------ | :------------------------------------------------------------------------ |
+| **client**   | add a search form at `/search` that logs the results to the console       |
+| **config**   | n/a                                                                       |
+| **database** | n/a                                                                       |
+| **server**   | n/a                                                                       |
