@@ -18,8 +18,8 @@ if (endpoint === "search") {
     const formData = new FormData(e.target);
     const body = stringifyFormData(formData);
     doPost('http://localhost:3001/api/books', body)
-    .then(res => console.log('pota res', res))
-    .catch(err => console.log('pota err', err));
+    .then(res => console.log('Successful response:', res))
+    .catch(err => console.log('We have an error:', err));
   }
 
   function stringifyFormData(fd) {
@@ -36,7 +36,7 @@ if (endpoint === "search") {
 
 async function doPost (url = '', body = {}) {
   if (!url || isEmpty(body)) {
-    console.error('Either the URL or the body is empty.');
+    console.error('Either the URL or the body is empty and each must have a value.');
     return undefined;
   }
   const response = await fetch(url, {
